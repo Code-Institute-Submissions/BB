@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for post in posts %}
+<!-- info-section of the page -->
+		<section class="info-section sameheight-block">
+			<!-- info-col of the page -->
+			<div class="info-col">
+				<a href="#">
+					<!-- info-heading of the page -->
+					<header class="info-heding sameheight">
+						<h2>NEW BREAKFAST CAFFEE OPENED</h2>
+						<p>WE HAVE REVIEWED IT FOR YOU</p>
+					</header>
+					<div class="img-holder">
+						<!-- picturefill html structure example -->
+						<span data-picture data-alt="image description">
+							<span data-src="http://placehold.it/533x400" data-height="400" data-width="533"></span>
+							<span data-src="http://placehold.it/1066x800" data-height="400" data-width="533" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span>
+							<!--[if (lt IE 9) & (!IEMobile)]>
+								<span data-src="images/http://placehold.it/533x400"></span>
+							<![endif]-->
+							<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+							<noscript><img src="images/http://placehold.it/533x400" width="533" height="400" alt="image description" ></noscript>
+						</span>
+					</div>
+				</a>
+			</div>
+			<!-- info-col of the page -->
+			<div class="info-col">
+				<a href="#">
+					<!-- info-heading of the page -->
+					<header class="info-heding sameheight">
+						<h2>THERE IS NOTHING LIKE COFFEE IN THE MORNING</h2>
+						<p>FRESH COFFEE EVERY DAY AT BRIXTONS</p>
+					</header>
+                    	<div class="img-holder">
+						<!-- picturefill html structure example -->
+						<span data-picture data-alt="image description">
+							<span { post.title } data-height="400" data-width="533"></span>
+							<span data-src="http://placehold.it/1066x800" data-height="400" data-width="533" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span>
+							<!--[if (lt IE 9) & (!IEMobile)]>
+								<span data-src="images/http://placehold.it/533x400"></span>
+							<![endif]-->
+							<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+							<noscript><img src="images/http://placehold.it/533x400" width="533" height="400" alt="image description" ></noscript>
+						</span>
+					</div>
+				</a>
+			</div>
+    {% endfor %}
+{% endblock %}
