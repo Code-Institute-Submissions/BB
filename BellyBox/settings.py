@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 
 import os
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -103,11 +104,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
-    'accounts.backends.EmailAuth'
-]
+#
+# AUTHENTICATION_BACKENDS = [
+#     'django.contrib.auth.backends.ModelBackend',
+#     'accounts.backends.EmailAuth'
+# ]
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
