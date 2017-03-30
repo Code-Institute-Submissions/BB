@@ -41,7 +41,7 @@
 						<div class="collapse navbar-collapse" id="brixton-nav">
 							<ul class="nav navbar-nav">
 								<li class="active">
-									<a href="#">HOME <span class="sr-only">(current)</span></a>
+									<a href="{% url 'index' %}">HOME <span class="sr-only">(current)</span></a>
 {#									<div class="drop">#}
 {#										<ul>#}
 {#											<li>#}
@@ -75,7 +75,7 @@
 {#									</div>#}
 {#								</li>#}
 								<li>
-									<a href="#">detail page</a>
+									<a href="#">Categories</a>
 {#									<div class="drop">#}
 {#										<ul>#}
 {#											<li><a href="#">post with sidebar</a></li>#}
@@ -85,11 +85,19 @@
 {#										</ul>#}
 {#									</div>#}
 								</li>
-								<li><a href="#">about us</a></li>
+								<li><a href="{% url "about" %}">About us</a></li>
 {#								<li><a href="#">typography</a></li>#}
 {#								<li><a href="#">Shortcodes</a></li>#}
-								<li class="active"><a href="#">PURCHASE</a></li>
-							</ul>
+								<li class="active"><a href="#">Online Store</a></li>
+                        {% if user.is_authenticated %}
+                            <li><a href="{% url 'profile' %}">Profile</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="{% url 'logout' %}">Log Out</a></li>
+                        {% else %}
+                            <li><a href="{% url 'login' %}?next={% url 'profile' %}">Log In</a></li>
+                            <li><a href="{% url 'register' %}">Register</a></li>
+                        {% endif %}
+                              </ul>
 						</div>
 					</nav>
 				</div>
@@ -104,15 +112,20 @@
 					</ul>
 				</div>
 			</div>
-			<div class="row logo-holder">
-				<div class="col-xs-12">
-					<!-- page logo -->
-					<h1 class="logo"><a href="#"><img src="{% static "images/BBlogo.png" %}" alt="BRIXTONS LOUNGE"></a></h1>
-					<!-- page slogan -->
-					<span class="slogan"><span class="txt">NEWS FROM THE CITY</span></span>
-				</div>
-			</div>
-		</header>
+
+             <!-- Main Logo -->
+		{% block logo %}
+    {% endblock  %}
+    <!-- End of Main Logo -->
+        	</header>
+
+
+
+    <!-- Blog Preview Entries -->
+{% block content %}
+    {%  endblock %}
+        <!-- End of Blog Preview Entries -->
+
 
             <!-- footer of the page -->
 		<footer id="footer" class="container">
@@ -137,16 +150,16 @@
 	<!-- include bootstrap JavaScript -->
 	<script src="{% static "js/bootstrap.min.js" %}"></script>
 	<!-- include instagram JavaScript -->
-	<script src="{% static "//instansive.com/widget/js/instansive.js" %}"></script>
+	<script src="{% static "js/instansive.com/widget/js/instansive.js" %}"></script>
 	<script type="text/javascript" src="{% static "js/jquery.main.js" %}"></script>
 	<script type="text/javascript">
 		if (navigator.userAgent.match(/IEMobile\/10\.0/) || navigator.userAgent.match(/MSIE 10.*Touch/)) {
-			var msViewportStyle = document.createElement('style')
+			var msViewportStyle = document.createElement('style');
 			msViewportStyle.appendChild(
 				document.createTextNode(
 					'@-ms-viewport{width:auto !important}'
 				)
-			)
+			);
 			document.querySelector('head').appendChild(msViewportStyle)
 		}
 	</script>

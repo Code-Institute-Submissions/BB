@@ -7,13 +7,13 @@ class Post(models.Model):
 
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
+    sub_title = models.CharField(max_length=30)
     content = models.TextField()
     created_date = models.DateField(auto_now_add=True)
     published_date = models.DateField(blank=True, null=True)
     views = models.IntegerField(default=0)
     tag = models.CharField(max_length=30, blank=True, null=True)
     image = models.ImageField(upload_to="images", blank=True, null=True)
-
 
     def publish(self):
         self.published_date = timezone.now()
