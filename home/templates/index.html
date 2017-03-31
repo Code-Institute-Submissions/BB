@@ -1,0 +1,250 @@
+{% extends "base.html" %}
+{%  block widget %}
+
+<!-- contain sidebar of the page -->
+					<aside  class="col-sm-4 col-lg-3" id="sidebar">
+						<!-- widget of the page -->
+						<section class="widget">
+							<h3>About me</h3>
+							<div class="img-box">
+								<a href="#">
+									<!-- picturefill html structure example -->
+									<span data-picture data-alt="image description">
+										<span data-src="http://placehold.it/233x248" data-height="248" data-width="233"></span>
+										<span data-src="http://placehold.it/466x496" data-height="248" data-width="233" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span> <!-- retina 2x desktop -->
+										<!--[if (lt IE 9) & (!IEMobile)]>
+											<span data-src="http://placehold.it/233x248"></span>
+										<![endif]-->
+										<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+										<noscript><img src="http://placehold.it/233x248" width="233" height="248" alt="image description" ></noscript>
+									</span>
+								</a>
+							</div>
+							<p>Hello, my name is <strong><a href="#">Brixton</a></strong>. I am a blogger living in New York. This is my blog, where I post my photos, fashion trends and tips about the fashion world. Never miss out on new stuff.</p>
+						</section>
+						<!-- social-widget of the page -->
+						<section class="widget social-widget">
+							<ul class="social-networks list-inline-style">
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa fa-flickr"></i></a></li>
+							</ul>
+						</section>
+						<!-- widget news-widget of the page -->
+						<section class="widget news-widget">
+							<h3>NEWSLETTER</h3>
+							<form action="#" class="subscribe-form">
+								<fieldset>
+									<label for="email">Sign up to receive updates and join our 2 subscribers that see what's new with Brixton!</label>
+									<input id="email" class="input-field" type="email" placeholder="Enter Email Address...">
+									<input class="btn-detail" type="submit" value="SIGN UP">
+								</fieldset>
+							</form>
+						</section>
+						<!-- popular-widget of the page -->
+						<section class="widget popular-widget">
+							<h3>Popular Posts</h3>
+							<div class="popular-box">
+								<div class="popular-posts">
+									<div class="img-box">
+										<a href="#">
+											<!-- picturefill html structure example -->
+											<span data-picture data-alt="image description">
+												<span data-src="http://placehold.it/232x131" data-height="131" data-width="232"></span>
+												<span data-src="http://placehold.it/464x262" data-height="131" data-width="232" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span> <!-- retina 2x desktop -->
+												<!--[if (lt IE 9) & (!IEMobile)]>
+													<span data-src="http://placehold.it/232x131"></span>
+												<![endif]-->
+												<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+												<noscript><img src="http://placehold.it/232x131" width="232" height="131" alt="image description" ></noscript>
+											</span>
+										</a>
+									</div>
+									<a href="#" class="brand-link">BRAND NEW SELECTION</a>
+								</div>
+								<div class="popular-posts">
+									<div class="img-box">
+										<a href="#">
+											<!-- picturefill html structure example -->
+											<span data-picture data-alt="image description">
+												<span data-src="http://placehold.it/232x131" data-height="131" data-width="232"></span>
+												<span data-src="http://placehold.it/464x262" data-height="131" data-width="232" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span> <!-- retina 2x desktop -->
+												<!--[if (lt IE 9) & (!IEMobile)]>
+													<span data-src="http://placehold.it/232x131"></span>
+												<![endif]-->
+												<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+												<noscript><img src="http://placehold.it/232x131" width="232" height="131" alt="image description" ></noscript>
+											</span>
+										</a>
+									</div>
+									<a href="#" class="brand-link">BRAND NEW BARBERSHOP</a>
+								</div>
+								<div class="popular-posts">
+									<div class="img-box">
+										<a href="#">
+											<!-- picturefill html structure example -->
+											<span data-picture data-alt="image description">
+												<span data-src="http://placehold.it/232x131" data-height="131" data-width="232"></span>
+												<span data-src="http://placehold.it/464x262" data-height="131" data-width="232" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span> <!-- retina 2x desktop -->
+												<!--[if (lt IE 9) & (!IEMobile)]>
+													<span data-src="http://placehold.it/232x131"></span>
+												<![endif]-->
+												<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+												<noscript><img src="http://placehold.it/232x131" width="232" height="131" alt="image description" ></noscript>
+											</span>
+										</a>
+									</div>
+									<a href="#" class="brand-link">NEW BREAKFAST CAFE</a>
+								</div>
+							</div>
+						</section>
+						<!-- categories-widget of the page -->
+						<section class="widget categories-widget">
+							<h3>Categories</h3>
+							<ul class="cat-list">
+								<li><a href="#">Blogroll</a></li>
+								<li><a href="#">Editor's choice</a></li>
+								<li><a href="#">Fashion</a></li>
+								<li><a href="#">Featured</a></li>
+								<li><a href="#">Photography</a></li>
+								<li><a href="#">Photoshootings</a></li>
+							</ul>
+						</section>
+						<!-- instagram-widget of the page -->
+						<section class="widget instagram-widget">
+							<h3>Instagram</h3>
+							<iframe src="//instansive.com/widgets/42e108ca202e77a1b151fe3cac6f6705e5880437.html" id="instansive_42e108ca20" name="instansive_42e108ca20"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+						</section>
+						<!-- advertising-widget of the page -->
+						<section class="widget advertising-widget">
+							<h3>ADVERTISING SECTION</h3>
+							<div class="advertising-banner">
+								<a href="#">
+									<!-- picturefill html structure example -->
+									<span data-picture data-alt="image description">
+										<span data-src="http://placehold.it/235x235" data-height="235" data-width="235"></span>
+										<span data-src="http://placehold.it/470x470" data-height="235" data-width="235" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span> <!-- retina 2x desktop -->
+										<!--[if (lt IE 9) & (!IEMobile)]>
+											<span data-src="http://placehold.it/235x235"></span>
+										<![endif]-->
+										<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+										<noscript><img src="http://placehold.it/235x235" width="235" height="235" alt="image description" ></noscript>
+									</span>
+								</a>
+							</div>
+						</section>
+						<!-- popular-widget of the page -->
+						<section class="widget popular-widget">
+							<h3>Recent Posts</h3>
+							<div class="popular-box">
+								<div class="popular-posts">
+									<div class="img-box">
+										<a href="#">
+											<!-- picturefill html structure example -->
+											<span data-picture data-alt="image description">
+												<span data-src="http://placehold.it/232x131" data-height="131" data-width="232"></span>
+												<span data-src="http://placehold.it/464x262" data-height="131" data-width="232" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span> <!-- retina 2x desktop -->
+												<!--[if (lt IE 9) & (!IEMobile)]>
+													<span data-src="http://placehold.it/232x131"></span>
+												<![endif]-->
+												<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+												<noscript><img src="http://placehold.it/232x131" width="232" height="131" alt="image description" ></noscript>
+											</span>
+										</a>
+									</div>
+									<a href="#" class="brand-link">visit to nature</a>
+								</div>
+								<div class="popular-posts">
+									<div class="img-box">
+										<a href="#">
+											<!-- picturefill html structure example -->
+											<span data-picture data-alt="image description">
+												<span data-src="http://placehold.it/232x131" data-height="131" data-width="232"></span>
+												<span data-src="http://placehold.it/464x262" data-height="131" data-width="232" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span> <!-- retina 2x desktop -->
+												<!--[if (lt IE 9) & (!IEMobile)]>
+													<span data-src="http://placehold.it/232x131"></span>
+												<![endif]-->
+												<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+												<noscript><img src="http://placehold.it/232x131" width="232" height="131" alt="image description" ></noscript>
+											</span>
+										</a>
+									</div>
+									<a href="#" class="brand-link">Beautiful hiking</a>
+								</div>
+								<div class="popular-posts">
+									<div class="img-box">
+										<a href="#">
+											<!-- picturefill html structure example -->
+											<span data-picture data-alt="image description">
+												<span data-src="http://placehold.it/232x131" data-height="131" data-width="232"></span>
+												<span data-src="http://placehold.it/464x262" data-height="131" data-width="232" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span> <!-- retina 2x desktop -->
+												<!--[if (lt IE 9) & (!IEMobile)]>
+													<span data-src="http://placehold.it/232x131"></span>
+												<![endif]-->
+												<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+												<noscript><img src="http://placehold.it/232x131" width="232" height="131" alt="image description" ></noscript>
+											</span>
+										</a>
+									</div>
+									<a href="#" class="brand-link">Treval For Facination</a>
+								</div>
+							</div>
+						</section>
+						<!-- form-widget of the page -->
+						<section class="widget form-widget">
+							<!-- submit-form of the page -->
+							<form action="#" class="submit-form">
+								<fieldset>
+									<input class="input-field" type="search" placeholder="Search...">
+									<input class="btn-detail" type="submit" value="SUBMIT">
+								</fieldset>
+							</form>
+						</section>
+						<!-- widget of the page text-widget -->
+						<section class="widget text-widget">
+							<h3>Purchase the Theme</h3>
+							<p>If you come all the way down here, you probably like our <strong>Brixton theme</strong>. To help you find where you can buy it, we prepared a solution for that also. Simply click the button below. </p>
+							<a href="#" class="btn-detail">Purchase Brixton</a>
+						</section>
+						<!-- twitter-widget of the page -->
+						<section class="widget twitter-widget">
+							<ul class="list-unstyled">
+								<li>
+									<div class="twitter-box">Today is a big milestone for <a href="http://twitter.com/Premiumcoding">@Premiumcoding</a>, we just reached 20 000 sales on <a href="http://twitter.com/envato">@envato</a> :), thanks everyone :)</div>
+									<a href="http://twitter.com/premiumcoding/statuses/581108322566291456" class="twitter_time">3 days ago</a>
+								</li>
+								<li>
+									<div class="twitter-box">Our best selling <a href="https://twitter.com/search?q=wordpress">#wordpress</a> blog theme, Brixton surpassed 200 sales in just 3 weeks :) <a href="http://t.co/uBApcW4U2D">http://t.co/uBApcW4U2D</a></div>
+									<a href="http://twitter.com/premiumcoding/statuses/580386952794488832" target="_blank" class="twitter_time">5 days ago</a>
+								</li>
+								<li>
+									<div class="twitter-box">Crafty Vixen is a <a href="https://twitter.com/search?q=Wordpress">#Wordpress</a> DIY Theme for bloggers who love to make things :) <a href="https://twitter.com/search?q=themeforest">#themeforest</a> <a href="http://t.co/f8mIBEcspA">http://t.co/f8mIBEcspA</a></div>
+									<a href="http://twitter.com/premiumcoding/statuses/580349692174729218" target="_blank" class="twitter_time">5 days ago</a>
+								</li>
+							</ul>
+						</section>
+						<!-- tag-widget of the page -->
+						<section class="widget tag-widget">
+							<h3>Tags</h3>
+							<div class="tagcloud">
+								<a href="#">barber</a>
+								<a href="#">beard</a>
+								<a href="#">bike</a>
+								<a href="#">book</a>
+								<a href="#">coffee</a>
+								<a href="#">design</a>
+								<a href="#">elegant</a>
+								<a href="#">fashion</a>
+								<a href="#">food</a>
+								<a href="#">hipster</a>
+								<a href="#">link post</a>
+								<a href="#">photograph</a>
+								<a href="#">read</a>
+								<a href="#">restaurant</a>
+								<a href="#">sweater</a>
+								<a href="#">trekking</a>
+							</div>
+						</section>
+					</aside>
+{% endblock %}

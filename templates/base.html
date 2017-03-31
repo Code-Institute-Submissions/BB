@@ -20,7 +20,7 @@
 	<!-- include the site stylesheet -->
 	<link rel="stylesheet" href="{% static "css/all.css" %}">
 </head>
-<body>
+<div>
 
 <!-- main container of all the page elements -->
 	<div id="wrapper">
@@ -124,12 +124,14 @@
 			</div>
 		</header>
 
-    <!-- Blog Preview Entries -->
+</div>
+</div>
 {% block content %}
-    {%  endblock %}
+    {%  endblock content %}
         <!-- End of Blog Preview Entries -->
 
-    <!-- follow-instagram of the page -->
+
+<!-- follow-instagram of the page -->
 		<section class="follow-instagram">
 			<!-- instagram-heading of the page -->
 			<header class="container instagram-heading">
@@ -149,7 +151,7 @@
 						<p>“I started with Brixton to provide you with <a href="#">daily fresh new ideas</a> about trends. It is a very clean and elegant HTML Template suitable for every blogger. Perfect for sharing your <a href="#">lifestyle</a>.”</p>
 						<div class="logo-holder">
 							<!-- page logo -->
-							<strong class="logo"><a href="#"><img src="{% static "images/logo3.png" %}" alt="BRIXTONS LOUNGE"></a></strong>
+							<strong class="logo"><a href="#"><img src="images/logo3.png" alt="BRIXTONS LOUNGE"></a></strong>
 							<!-- page slogan -->
 							<span class="slogan">NEWS FROM THE CITY</span>
 						</div>
@@ -157,13 +159,11 @@
 				</div>
 			</div>
 		</section>
-
-
-            <!-- footer of the page -->
+		<!-- footer of the page -->
 		<footer id="footer" class="container">
 			<div class="row">
 				<div class="col-sm-6 col-xs-12">
-					<p>© 2017 copyright <a href="#">BellyBox</a> // All rights reserved</p>
+					<p>© 2015 copyright <a href="http://htmlbeans.com">HTMLBEANS</a> &amp; <a href="http://premiumcoding.com">PMC</a> // All rights reserved</p>
 				</div>
 				<div class="col-sm-6 col-xs-12">
 					<!-- footer-nav of the page -->
@@ -177,12 +177,13 @@
 			</div>
 		</footer>
 	</div>
+
 	<!-- include custom JavaScript -->
 	<script type="text/javascript" src="{% static "js/jquery-1.11.2.min.js" %}"></script>
 	<!-- include bootstrap JavaScript -->
 	<script src="{% static "js/bootstrap.min.js" %}"></script>
 	<!-- include instagram JavaScript -->
-	<script src="{% static "js/instansive.com/widget/js/instansive.js" %}"></script>
+	<script src="{% static "instansive.com/widget/js/instansive.js" %}"></script>
 	<script type="text/javascript" src="{% static "js/jquery.main.js" %}"></script>
 	<script type="text/javascript">
 		if (navigator.userAgent.match(/IEMobile\/10\.0/) || navigator.userAgent.match(/MSIE 10.*Touch/)) {

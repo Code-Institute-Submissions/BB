@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load bootstrap_tags %}
 {% block content %}
+    <div class="container-fluid">
+    <div class="row col-lg-offset-2">
     <form role="form" method="post" action="{% url 'login' %}?next={{ next }}">
         <legend>Login</legend>
         {% csrf_token %}
@@ -9,4 +11,6 @@
             <button type="submit" class="btn btn-primary">Login</button>
         </div>
     </form>
+        </div>
+    </div>
 {% endblock %}
