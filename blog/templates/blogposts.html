@@ -4,15 +4,16 @@
 
 {% block content %}
     {% for post in posts %}
+
         <!-- info-section of the page -->
 		<section class="info-section sameheight-block">
 			<!-- info-col of the page -->
 			<div class="info-col">
-				<a href="#">
+				<a href="{% url 'post_detail' post.id %}">
 					<!-- info-heading of the page -->
 					<header class="info-heding sameheight">
-						<h2>NEW BREAKFAST CAFFEE OPENED</h2>
-						<p>WE HAVE REVIEWED IT FOR YOU</p>
+						<h2>{{ post.title }}</h2>
+						<p>{{ post.sub_title }}</p>
 					</header>
 					<div class="img-holder">
 						<!-- picturefill html structure example -->
@@ -30,16 +31,16 @@
 			</div>
 			<!-- info-col of the page -->
 			<div class="info-col">
-				<a href="#">
+				<a href="{% url 'post_detail' post.id %}">
 					<!-- info-heading of the page -->
 					<header class="info-heding sameheight">
-						<h2>THERE IS NOTHING LIKE COFFEE IN THE MORNING</h2>
-						<p>FRESH COFFEE EVERY DAY AT BRIXTONS</p>
+						<h2>{{ post.title }}</h2>
+						<p>{{ post.sub_title }}</p>
 					</header>
 					<div class="img-holder">
 						<!-- picturefill html structure example -->
 						<span data-picture data-alt="image description">
-							<span data-src="http://placehold.it/533x400" data-height="400" data-width="533"></span>
+							<span> <img src="{{ MEDIA_URL }}{{ post.image }}" data-height="400" data-width="533"></span>
 							<span data-src="http://placehold.it/1066x800" data-height="400" data-width="533" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span>
 							<!--[if (lt IE 9) & (!IEMobile)]>
 								<span data-src="images/http://placehold.it/533x400"></span>
@@ -570,33 +571,6 @@
 				</div>
 			</div>
 		</main>
-		<!-- follow-instagram of the page -->
-		<section class="follow-instagram">
-			<!-- instagram-heading of the page -->
-			<header class="container instagram-heading">
-				<div class="row">
-					<div class="col-xs-12">
-						<h2>FOLLOW ME ON INSTAGRAM</h2>
-					</div>
-				</div>
-			</header>
-			<!-- instagram-frame of the page -->
-			<div class="instagram-iframe">
-				<iframe src="//instansive.com/widgets/c0984a7f1089b2299f711405045787c2f1fc95d9.html" id="instansive_c0984a7f10" name="instansive_c0984a7f10"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12">
-						<p>“I started with Brixton to provide you with <a href="#">daily fresh new ideas</a> about trends. It is a very clean and elegant HTML Template suitable for every blogger. Perfect for sharing your <a href="#">lifestyle</a>.”</p>
-						<div class="logo-holder">
-							<!-- page logo -->
-							<strong class="logo"><a href="#"><img src="{%  static "images/logo3.png" %}" alt="BRIXTONS LOUNGE"></a></strong>
-							<!-- page slogan -->
-							<span class="slogan">NEWS FROM THE CITY</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+
 {%  endfor %}
 {%  endblock %}

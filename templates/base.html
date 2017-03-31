@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="{% static "css/all.css" %}">
 </head>
 <body>
+
 <!-- main container of all the page elements -->
 	<div id="wrapper">
 		<!-- header of the page -->
@@ -85,10 +86,10 @@
 {#										</ul>#}
 {#									</div>#}
 								</li>
-								<li><a href="{% url "about" %}">About us</a></li>
+								<li><a href="{% url 'about' %}">About us</a></li>
 {#								<li><a href="#">typography</a></li>#}
 {#								<li><a href="#">Shortcodes</a></li>#}
-								<li class="active"><a href="#">Online Store</a></li>
+								<li><a href="#">Online Store</a></li>
                         {% if user.is_authenticated %}
                             <li><a href="{% url 'profile' %}">Profile</a></li>
                             <li role="separator" class="divider"></li>
@@ -113,18 +114,49 @@
 				</div>
 			</div>
 
-             <!-- Main Logo -->
-		{% block logo %}
-    {% endblock  %}
-    <!-- End of Main Logo -->
-        	</header>
-
-
+	<div class="row logo-holder">
+				<div class="col-xs-12">
+					<!-- page logo -->
+					<h1 class="logo"><a href="#"><img src="{% static "images/BBlogo.png" %}" alt="BRIXTONS LOUNGE"></a></h1>
+					<!-- page slogan -->
+					<span class="slogan"><span class="txt">FOOD IN THE CITY</span></span>
+				</div>
+			</div>
+		</header>
 
     <!-- Blog Preview Entries -->
 {% block content %}
     {%  endblock %}
         <!-- End of Blog Preview Entries -->
+
+    <!-- follow-instagram of the page -->
+		<section class="follow-instagram">
+			<!-- instagram-heading of the page -->
+			<header class="container instagram-heading">
+				<div class="row">
+					<div class="col-xs-12">
+						<h2>FOLLOW ME ON INSTAGRAM</h2>
+					</div>
+				</div>
+			</header>
+			<!-- instagram-frame of the page -->
+			<div class="instagram-iframe">
+				<iframe src="//instansive.com/widgets/c0984a7f1089b2299f711405045787c2f1fc95d9.html" id="instansive_c0984a7f10" name="instansive_c0984a7f10"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<p>“I started with Brixton to provide you with <a href="#">daily fresh new ideas</a> about trends. It is a very clean and elegant HTML Template suitable for every blogger. Perfect for sharing your <a href="#">lifestyle</a>.”</p>
+						<div class="logo-holder">
+							<!-- page logo -->
+							<strong class="logo"><a href="#"><img src="{% static "images/logo3.png" %}" alt="BRIXTONS LOUNGE"></a></strong>
+							<!-- page slogan -->
+							<span class="slogan">NEWS FROM THE CITY</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
 
             <!-- footer of the page -->

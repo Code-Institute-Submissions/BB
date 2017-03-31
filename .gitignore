@@ -3,4 +3,4 @@
 db.sqlite3
 env.py
 env.sh
-*.pyc
+.pyc
