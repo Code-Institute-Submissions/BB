@@ -6,6 +6,5 @@ from blog.views import widget
 urlpatterns = [
     url(r'^about/', about, name='about'),
     url(r'^$', post_list, name='index'),
-    url(r'^widget/', widget,name='index' )
 
 ]

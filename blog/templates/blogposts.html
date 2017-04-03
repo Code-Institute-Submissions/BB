@@ -35,94 +35,15 @@
 			</div>
 
 
-
 {% endfor %}
          </section>
     <hr>
-    {% for post in posts %}
 
-		<!-- contain main informative part of the site -->
-		<main id="main" role="main">
+    	<main id="main" role="main">
 			<div class="container twocolumns">
 				<div class="row">
 					<!-- posts-holder of the page -->
 					<section class="col-sm-8 col-lg-9 posts-holder">
-						<!-- posts-blog of the page -->
-						<article class="posts-blog">
-							<header class="main-heading">
-								<strong class="post-title"><span class="txt"><a href="#">LIFESTYLE</a> , <a href="#">Photoshootings</a> , <a href="#">Fashion</a></span></strong>
-								<h2><a href='{% url 'post_detail' post.id %}'>{{ post.title }}</a></h2>
-							</header>
-							<div class="post-img">
-								<a href="#">
-									<!-- picturefill html structure example -->
-									<span>
-										<span><img src="{{ MEDIA_URL }}{{ post.image }}" width="800" height="409" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span> <!-- retina 2x desktop -->
-										<!--[if (lt IE 9) & (!IEMobile)]>
-											<span data-src="http://placehold.it/800x409"></span>
-										<![endif]-->
-										<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-										<noscript>><img src="{{ MEDIA_URL }}{{ post.image }}" width="800" height="409" alt="image description" ></noscript>
-									</span>
-								</a>
-							</div>
-							<p><sub class="su-dropcap">F</sub>ashion is a popular style or practice, especially in clothing, footwear, access, makeup, body piercing, or furniture. <strong>Fashion</strong> is a distinctive and often habitual trend in the style in which a person dresses. It is the prevailing styles in behaviour and the newest creations of textile designers. Because the more technical term costume is regularly linked to the term “fashion”, the use of the former has been relegated to special senses like fancy dress or masquerade wear, while “fashion” generally means clothing, including the study of it. Although aspects of <strong><a href="http://en.wikipedia.org/wiki/Fashion" title="Fashion Clothes">Fashion</a></strong> can be feminine or masculine, some trends are androgynous.</p>
-							<blockquote class="blockquote">
-								<q>Although tailors and dressmakers were no doubt responsible for many  innovations, and the textile industry certainly led many trends, the history of fashion design is normally understood to date from 1858 when the English-born Charles Frederick Worth opened the first true haute couture house in Paris. -</q>
-								<cite>John Doe</cite>
-							</blockquote>
-							<p>The Haute house was the name established by government for the fashion houses that met the standards of industry. These fashion houses have to adhere to standards such as keeping at least twenty employees engaged in making the clothes, showing two collections per year at fashion shows, and presenting a certain number of patterns to costumers. Since then, the idea of the fashion designer as a celebrity in his or her own right has become increasingly dominant.</p>
-							<div class="alignleft">
-								<a href="#">
-									<!-- picturefill html structure example -->
-									<span data-picture data-alt="image description">
-										<span data-src="http://placehold.it/358x322" data-height="322" data-width="358"></span>
-										<span data-src="http://placehold.it/716x644" data-height="322" data-width="358" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span> <!-- retina 2x desktop -->
-										<!--[if (lt IE 9) & (!IEMobile)]>
-											<span data-src="images/http://placehold.it/358x322"></span>
-										<![endif]-->
-										<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-										<noscript><img src="http://placehold.it/358x322" width="358" height="322" alt="image description" ></noscript>
-									</span>
-								</a>
-							</div>
-							<p>The idea of unisex dressing originated in the 1960s when designers such as <strong>Pierre Cardin</strong> and Rudi Gernreich created garments, such as stretch jersey tunics or leggings, meant to be worn by both males and females. The impact of unisex expands more broadly to encompass various themes in fashion including androgyny, mass-market retail, and conceptual clothing.&nbsp;The fashion trends of the 1970s, such as<strong> sheepskin jackets</strong>, flight jackets, duffel coats, and unstructured clothing influenced men to attend social gatherings.</p>
-							<p>Fashion is a popular style or practice, especially in clothing, footwear, access, makeup, body piercing, or furniture. Fashion is a distinctive and often habitual trend in the style in which a person dresses. It is the prevailing styles in behaviour and the newest creations of textile</p>
-							<span class="continue-reading"><a href="#">Continue reading...</a></span>
-							<footer class="post-social">
-								<span class="date-holder"><a href="#">January 25, 2015</a> by <a href="#">Brixton</a></span>
-								<ul class="social-networks list-inline-style">
-									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-									<li><a href="#"><i class="fa fa-flickr"></i></a></li>
-									<li><a href="#"><i class="fa fa-stumbleupon"></i></a></li>
-								</ul>
-							</footer>
-						</article>
-
-   {% endfor %}
-
-    	                <!-- posts-blog of the page -->
-						<article class="posts-blog quotes">
-							<blockquote class="blockquote">
-								<q>A really great man is known by three signs: generosity in the design, humanity in the execution, moderation in the success.</q>
-								<cite>Otto von Bismarck</cite>
-							</blockquote>
-						</article>
-						<!-- posts-blog of the page -->
-
-                        <!--Pagination Section -->
-						<nav class="pagination-nav">
-							<ul class="pagination list-inline-style">
-								<li class="active"><a href="#">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">>></a></li>
-							</ul>
-						</nav>
-                        <!--Pagination Section -->
-
-
 <!-- contain sidebar of the page -->
 					<aside  class="col-sm-4 col-lg-3" id="sidebar">
 						<!-- widget of the page -->
@@ -369,8 +290,91 @@
 							</div>
 						</section>
 					</aside>
-                </section>
-			</div>
-        </div>
-		</main>
+
+    {% for post in posts %}
+
+		<!-- contain main informative part of the site -->
+{#		<main id="main" role="main">#}
+{#			<div class="container twocolumns">#}
+{#				<div class="row">#}
+{#					<!-- posts-holder of the page -->#}
+{#					<section class="col-sm-8 col-lg-9 posts-holder">#}
+						<!-- posts-blog of the page -->
+						<article class="posts-blog">
+							<header class="main-heading">
+								<strong class="post-title"><span class="txt"><a href="#">LIFESTYLE</a> , <a href="#">Photoshootings</a> , <a href="#">Fashion</a></span></strong>
+								<h2><a href='{% url 'post_detail' post.id %}'>{{ post.title }}</a></h2>
+							</header>
+							<div class="post-img">
+								<a href="#">
+									<!-- picturefill html structure example -->
+									<span>
+										<span><img src="{{ MEDIA_URL }}{{ post.image }}" width="800" height="409" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span> <!-- retina 2x desktop -->
+										<!--[if (lt IE 9) & (!IEMobile)]>
+											<span data-src="http://placehold.it/800x409"></span>
+										<![endif]-->
+										<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+										<noscript>><img src="{{ MEDIA_URL }}{{ post.image }}" width="800" height="409" alt="image description" ></noscript>
+									</span>
+								</a>
+							</div>
+							<p><sub class="su-dropcap">F</sub>ashion is a popular style or practice, especially in clothing, footwear, access, makeup, body piercing, or furniture. <strong>Fashion</strong> is a distinctive and often habitual trend in the style in which a person dresses. It is the prevailing styles in behaviour and the newest creations of textile designers. Because the more technical term costume is regularly linked to the term “fashion”, the use of the former has been relegated to special senses like fancy dress or masquerade wear, while “fashion” generally means clothing, including the study of it. Although aspects of <strong><a href="http://en.wikipedia.org/wiki/Fashion" title="Fashion Clothes">Fashion</a></strong> can be feminine or masculine, some trends are androgynous.</p>
+							<blockquote class="blockquote">
+								<q>Although tailors and dressmakers were no doubt responsible for many  innovations, and the textile industry certainly led many trends, the history of fashion design is normally understood to date from 1858 when the English-born Charles Frederick Worth opened the first true haute couture house in Paris. -</q>
+								<cite>John Doe</cite>
+							</blockquote>
+							<p>The Haute house was the name established by government for the fashion houses that met the standards of industry. These fashion houses have to adhere to standards such as keeping at least twenty employees engaged in making the clothes, showing two collections per year at fashion shows, and presenting a certain number of patterns to costumers. Since then, the idea of the fashion designer as a celebrity in his or her own right has become increasingly dominant.</p>
+							<div class="alignleft">
+								<a href="#">
+									<!-- picturefill html structure example -->
+									<span data-picture data-alt="image description">
+										<span data-src="http://placehold.it/358x322" data-height="322" data-width="358"></span>
+										<span data-src="http://placehold.it/716x644" data-height="322" data-width="358" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span> <!-- retina 2x desktop -->
+										<!--[if (lt IE 9) & (!IEMobile)]>
+											<span data-src="images/http://placehold.it/358x322"></span>
+										<![endif]-->
+										<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+										<noscript><img src="http://placehold.it/358x322" width="358" height="322" alt="image description" ></noscript>
+									</span>
+								</a>
+							</div>
+							<p>The idea of unisex dressing originated in the 1960s when designers such as <strong>Pierre Cardin</strong> and Rudi Gernreich created garments, such as stretch jersey tunics or leggings, meant to be worn by both males and females. The impact of unisex expands more broadly to encompass various themes in fashion including androgyny, mass-market retail, and conceptual clothing.&nbsp;The fashion trends of the 1970s, such as<strong> sheepskin jackets</strong>, flight jackets, duffel coats, and unstructured clothing influenced men to attend social gatherings.</p>
+							<p>Fashion is a popular style or practice, especially in clothing, footwear, access, makeup, body piercing, or furniture. Fashion is a distinctive and often habitual trend in the style in which a person dresses. It is the prevailing styles in behaviour and the newest creations of textile</p>
+							<span class="continue-reading"><a href="#">Continue reading...</a></span>
+							<footer class="post-social">
+								<span class="date-holder"><a href="#">January 25, 2015</a> by <a href="#">Brixton</a></span>
+								<ul class="social-networks list-inline-style">
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+									<li><a href="#"><i class="fa fa-flickr"></i></a></li>
+									<li><a href="#"><i class="fa fa-stumbleupon"></i></a></li>
+								</ul>
+							</footer>
+						</article>
+
+   {% endfor %}
+
+    	                <!-- posts-blog of the page -->
+						<article class="posts-blog quotes">
+							<blockquote class="blockquote">
+								<q>A really great man is known by three signs: generosity in the design, humanity in the execution, moderation in the success.</q>
+								<cite>Otto von Bismarck</cite>
+							</blockquote>
+						</article>
+						<!-- posts-blog of the page -->
+
+                        <!--Pagination Section -->
+						<nav class="pagination-nav">
+							<ul class="pagination list-inline-style">
+								<li class="active"><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">>></a></li>
+							</ul>
+						</nav>
+                        <!--Pagination Section -->
+                    </section>
+                </div>
+            </div>
+        </main>
 {% endblock %}
