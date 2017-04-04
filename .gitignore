@@ -5,3 +5,4 @@ env.py
 env.sh
 .pyc*.pyc
 *.pyc
+media/images
