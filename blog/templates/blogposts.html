@@ -20,7 +20,7 @@
 						<!-- picturefill html structure example -->
                           {% if post.image %}
 						<span>
-							<span><img src="{{ MEDIA_URL }}{{ post.image }}" height="400px" width="533px"></span>
+                              <span><img src="{{ MEDIA_URL }}{{ post.image }}" height="400px" width="533px"><a href="{% url 'post_detail' post.id %}"></a></span>
                              {% endif %}
 
 
@@ -37,15 +37,9 @@
 
 {% endfor %}
          </section>
-    <hr>
+{#    <!-- contain sidebar of the page -->#}
+					<aside  class="col-sm-4 col-lg-3 pull-right" id="sidebar">
 
-    	<main id="main" role="main">
-			<div class="container twocolumns">
-				<div class="row">
-					<!-- posts-holder of the page -->
-					<section class="col-sm-8 col-lg-9 posts-holder">
-<!-- contain sidebar of the page -->
-					<aside  class="col-sm-4 col-lg-3" id="sidebar">
 						<!-- widget of the page -->
 						<section class="widget">
 							<h3>About me</h3>
@@ -53,13 +47,12 @@
 								<a href="#">
 									<!-- picturefill html structure example -->
 									<span data-picture data-alt="image description">
-										<span data-src="http://placehold.it/233x248" data-height="248" data-width="233"></span>
-										<span data-src="http://placehold.it/466x496" data-height="248" data-width="233" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span> <!-- retina 2x desktop -->
+										<a href="#"><img src="{% static "images/whiskey.gif" %}" height="248" width="233" ></a>
 										<!--[if (lt IE 9) & (!IEMobile)]>
 											<span data-src="http://placehold.it/233x248"></span>
 										<![endif]-->
 										<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-										<noscript><img src="http://placehold.it/233x248" width="233" height="248" alt="image description" ></noscript>
+										<noscript><img src="{% static "images/whiskey.gif" %}" height="248" width="233" alt="image description" ></noscript>
 									</span>
 								</a>
 							</div>
@@ -74,17 +67,7 @@
 								<li><a href="#"><i class="fa fa-flickr"></i></a></li>
 							</ul>
 						</section>
-						<!-- widget news-widget of the page -->
-						<section class="widget news-widget">
-							<h3>NEWSLETTER</h3>
-							<form action="#" class="subscribe-form">
-								<fieldset>
-									<label for="email">Sign up to receive updates and join our 2 subscribers that see what's new with Brixton!</label>
-									<input id="email" class="input-field" type="email" placeholder="Enter Email Address...">
-									<input class="btn-detail" type="submit" value="SIGN UP">
-								</fieldset>
-							</form>
-						</section>
+
 						<!-- popular-widget of the page -->
 						<section class="widget popular-widget">
 							<h3>Popular Posts</h3>
@@ -159,24 +142,7 @@
 							<h3>Instagram</h3>
 							<iframe src="//instansive.com/widgets/42e108ca202e77a1b151fe3cac6f6705e5880437.html" id="instansive_42e108ca20" name="instansive_42e108ca20"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
 						</section>
-						<!-- advertising-widget of the page -->
-						<section class="widget advertising-widget">
-							<h3>ADVERTISING SECTION</h3>
-							<div class="advertising-banner">
-								<a href="#">
-									<!-- picturefill html structure example -->
-									<span data-picture data-alt="image description">
-										<span data-src="http://placehold.it/235x235" data-height="235" data-width="235"></span>
-										<span data-src="http://placehold.it/470x470" data-height="235" data-width="235" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span> <!-- retina 2x desktop -->
-										<!--[if (lt IE 9) & (!IEMobile)]>
-											<span data-src="http://placehold.it/235x235"></span>
-										<![endif]-->
-										<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-										<noscript><img src="http://placehold.it/235x235" width="235" height="235" alt="image description" ></noscript>
-									</span>
-								</a>
-							</div>
-						</section>
+
 						<!-- popular-widget of the page -->
 						<section class="widget popular-widget">
 							<h3>Recent Posts</h3>
@@ -244,12 +210,7 @@
 								</fieldset>
 							</form>
 						</section>
-						<!-- widget of the page text-widget -->
-						<section class="widget text-widget">
-							<h3>Purchase the Theme</h3>
-							<p>If you come all the way down here, you probably like our <strong>Brixton theme</strong>. To help you find where you can buy it, we prepared a solution for that also. Simply click the button below. </p>
-							<a href="#" class="btn-detail">Purchase Brixton</a>
-						</section>
+
 						<!-- twitter-widget of the page -->
 						<section class="widget twitter-widget">
 							<ul class="list-unstyled">
@@ -291,18 +252,19 @@
 						</section>
 					</aside>
 
-    {% for post in posts %}
+
+     {% for post in posts %}
 
 		<!-- contain main informative part of the site -->
-{#		<main id="main" role="main">#}
-{#			<div class="container twocolumns">#}
-{#				<div class="row">#}
-{#					<!-- posts-holder of the page -->#}
-{#					<section class="col-sm-8 col-lg-9 posts-holder">#}
+		<main id="main" role="main">
+			<div class="container twocolumns">
+				<div class="row">
+					<!-- posts-holder of the page -->
+					<section class="col-sm-8 col-lg-9 centered posts-holder">
 						<!-- posts-blog of the page -->
 						<article class="posts-blog">
 							<header class="main-heading">
-								<strong class="post-title"><span class="txt"><a href="#">LIFESTYLE</a> , <a href="#">Photoshootings</a> , <a href="#">Fashion</a></span></strong>
+								<strong class="post-title"><span class="txt"><a href="#">Wings</a></span></strong>
 								<h2><a href='{% url 'post_detail' post.id %}'>{{ post.title }}</a></h2>
 							</header>
 							<div class="post-img">
@@ -352,9 +314,16 @@
 								</ul>
 							</footer>
 						</article>
+                    </section>
+                </div>
+            </div>
+        </main>
+
 
    {% endfor %}
 
+			<div class="container twocolumns">
+				<div class="row">
     	                <!-- posts-blog of the page -->
 						<article class="posts-blog quotes">
 							<blockquote class="blockquote">
@@ -373,8 +342,7 @@
 							</ul>
 						</nav>
                         <!--Pagination Section -->
-                    </section>
                 </div>
             </div>
-        </main>
+
 {% endblock %}

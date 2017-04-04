@@ -51,7 +51,7 @@
 
 								</li>
 								<li><a href="{% url 'about' %}">About us</a></li>
-								<li><a href="#">Online Store</a></li>
+								<li><a href="{% url 'products' %}">Online Store</a></li>
                         {% if user.is_authenticated %}
                             <li><a href="{% url 'profile' %}">Profile</a></li>
                             <li role="separator" class="divider"></li>
@@ -87,11 +87,8 @@
 		</header>
 
 </div>
-{#		<main id="main" role="main">#}
-{#			<div class="container twocolumns">#}
-{#				<div class="row">#}
-{#					<!-- posts-holder of the page -->#}
-{#					<section class="col-sm-8 col-lg-9 posts-holder">#}
+
+
 {% block content %}
     {%  endblock content %}
         <!-- End of Blog Preview Entries -->
