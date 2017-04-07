@@ -18,10 +18,10 @@
 	<link rel="stylesheet" href="{% static "css/fancybox.css" %}">
 	<!-- include the site stylesheet -->
 	<link rel="stylesheet" href="{% static "css/all.css" %}">
+	<script type="text/javascript" src="{% static "js/jquery-1.11.2.min.js" %}"></script>
+     {% block head_js %}{% endblock %}
 </head>
 <body>
-
-
 <!-- main container of all the page elements -->
 	<div id="wrapper">
 		<!-- header of the page -->
@@ -38,6 +38,17 @@
 								<span class="icon-bar"></span>
 							</button>
 						</div>
+
+    {% if messages %}
+        <div class="alert alert-success">
+            <div class="messages">
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="brixton-nav">
 							<ul class="nav navbar-nav">
@@ -124,7 +135,7 @@
 						<p>“I started with Brixton to provide you with <a href="#">daily fresh new ideas</a> about trends. It is a very clean and elegant HTML Template suitable for every blogger. Perfect for sharing your <a href="#">lifestyle</a>.”</p>
 						<div class="logo-holder">
 							<!-- page logo -->
-							<strong class="logo"><a href="#"><img src="{% static "images/BBlogo.png" %}" alt="BRIXTONS LOUNGE"></a></strong>
+							<strong class="logo"><a href="#"><img src="{% static "images/BBlogo.png" %}" alt="BellyBox"></a></strong>
 							<!-- page slogan -->
 							<span class="slogan">NEWS FROM THE CITY</span>
 						</div>
@@ -152,7 +163,7 @@
 
 
 	<!-- include custom JavaScript -->
-	<script type="text/javascript" src="{% static "js/jquery-1.11.2.min.js" %}"></script>
+
 	<!-- include bootstrap JavaScript -->
 	<script src="{% static "js/bootstrap.min.js" %}"></script>
 	<!-- include instagram JavaScript -->
