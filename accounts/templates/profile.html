@@ -3,11 +3,18 @@
 {% block content %}
     {% load static from staticfiles %}
 {% load bootstrap_tags %}
-
+ <div class="container">
+    <div class="col-md-6">
     <img src="{% gravatar_url user.email 150 %}" style="width:100px; height: 100px; background-color: #12ABB2; color: #ffffff;" class="img-circle">
     <h2>Success!</h2>
     <p>You are logged in as {{ user.email }} </p>
-
+     {% if user.is_authenticated %}
+         <div class="col-md-6">
+         <button class="btn btn-default" onclick="location.href='{% url 'new_post' %}'">New Post</button>
+         </div>
+                {% endif %}
+    </div>
+ </div>
 {% block head_js %}
     <script src="https://js.stripe.com/v2/" type="text/javascript"></script>
     <script type="text/javascript">
