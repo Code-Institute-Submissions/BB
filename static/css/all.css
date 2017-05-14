@@ -2438,10 +2438,17 @@ Primary use:	Blog
  * set default background
  */
 
+/* Chris Custom CSS to fix horizontal scroll */
+
+body {
+    overflow-x: hidden !important;
+}
+  
 body {
 	font: 18px/34px "Raleway", Helvetica, Arial, sans-serif;
 	background: #f4f4f4;
 	color: #444;
+	width: 100%;
 }
 
 /* set styles for default page links */

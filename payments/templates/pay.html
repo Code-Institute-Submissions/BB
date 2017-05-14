@@ -12,6 +12,8 @@
 {% endblock %}
 
 {% block content %}
+        <div class="container">
+    <div class="col-md-12">
     <form role="form" method="post" id="payment-form" action="{% url 'buy_now_stripe' product.id %}">
     <div id="credit-card-errors" style="display:none">
       <div class="alert-message block-message error" id="stripe-error-message"></div>
@@ -19,7 +21,7 @@
 
     <legend>Buy It Now!</legend>
 
-    <div>
+    <div class="product-page col-md-offset-4 text-center">
         <p><img height="100" width="100" src="{{ MEDIA_URL }}{{ product.image }}"></p>
         <p>{{ product.name }}</p>
         <p>{{ product.description }}</p>
@@ -34,4 +36,6 @@
       <input class="btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
     </div>
     </form>
+    </div>
+        </div>
 {% endblock %}

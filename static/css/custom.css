@@ -1,3 +1,13 @@
 .info-col .img-holder img {
-    height: auto;
+    height: 275px !important;
+}
+
+#sidebar {
+    margin-top: 90px !important;
+}
+
+@media only screen and (max-width: 678px) {
+    #sidebar {
+        display: none !important;
+    }
 }
