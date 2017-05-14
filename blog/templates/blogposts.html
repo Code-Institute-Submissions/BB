@@ -145,7 +145,7 @@
 								<li><a href="#">Wings</a></li>
 								<li><a href="#">Salads</a></li>
 								<li><a href="#">Burgers</a></li>
-								<li><a href="#">Our Favourites</a></li>
+								<li><a href="#">Sandwiches</a></li>
 							</ul>
 						</section>
 						<!-- instagram-widget of the page -->
@@ -265,11 +265,11 @@
 						<!-- posts-blog of the page -->
 						<article class="posts-blog">
 							<header class="main-heading">
-								<strong class="post-title"><span class="txt"><a href="#">Wings</a></span></strong>
+								<strong class="post-title"><span class="txt"><a href="#">{{ post.category }}</a></span></strong>
 								<h2><a href='{% url 'post_detail' post.id %}'>{{ post.title }}</a></h2>
 							</header>
 							<div class="post-img">
-								<a href="#">
+								<a href='{% url 'post_detail' post.id %}'>
 									<!-- picturefill html structure example -->
 									<span>
 										<span><img src="{{ MEDIA_URL }}{{ post.image }}" width="800" height="409" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span> <!-- retina 2x desktop -->
@@ -282,7 +282,7 @@
 								</a>
 							</div>
                              <p>{{ post.content }}</p>
-							<span class="continue-reading"><a href="#">Continue reading...</a></span>
+							<span class="continue-reading"><a href='{% url 'post_detail' post.id %}'>Continue reading...</a></span>
 							<footer class="post-social">
 								<span class="date-holder"><a href="#">{{ post.published_date }}</a> by <a href='{% url 'post_detail' post.id %}'>{{ post.author }}</a></span>
 								<ul class="social-networks list-inline-style">
@@ -304,17 +304,6 @@
 
    {% endfor %}
 
-
-
-                        <!--Pagination Section -->
-						<nav class="pagination-nav">
-							<ul class="pagination list-inline-style">
-								<li class="active"><a href="#">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">>></a></li>
-							</ul>
-						</nav>
-                        <!--Pagination Section -->
 
 
 {% endblock %}

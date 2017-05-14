@@ -20,8 +20,12 @@
 	<link rel="stylesheet" href="{% static "css/fancybox.css" %}">
 	<!-- include the site stylesheet -->
 	<link rel="stylesheet" href="{% static "css/all.css" %}">
+	<!-- include the portfolio stylesheet -->
+	<link rel="stylesheet" href="{% static "css/style.css" %}">
 	<!-- include the site stylesheet -->
 	<link rel="stylesheet" href="{% static "css/custom.css" %}">
+ <!-- modernizr -->
+	<script src="{% static "js/modernizr.js" %}"></script>
 
 
      {% block head_js %} {% endblock %}
@@ -64,20 +68,9 @@
 
 								<li>
 									<a href="{% url 'categories' %}">Categories</a>
-                                    <div class="drop">
-										<ul>
-											<li>
-												<a href="#">Ribs</a> </li>
-                                        <li>
-												<a href="#">Wings</a> </li>
-                                        <li>
-												<a href="#">Salads</a> </li>
-                                        <li>
-												<a href="#">Burgers</a> </li>
-                                        </ul>
 
 								<li><a href="{% url 'about' %}">About us</a></li>
-								<li><a href="{% url 'products' %}">Buy Now</a></li>
+								<li><a href="{% url 'products' %}">Online Store</a></li>
                         {% if user.is_authenticated %}
                             <li><a href="{% url 'profile' %}">Profile</a></li>
                             <li role="separator" class="divider"></li>
@@ -107,7 +100,7 @@
 	<div class="row logo-holder">
 				<div class="col-lg-12">
 					<!-- page logo -->
-					<h1 class="logo"><a href="#"><img src="{% static "images/BBlogo.png" %}" alt="BellyBox"></a></h1>
+					<h1 class="logo"><a href="{% url 'index' %}"><img src="{% static "images/BBlogo.png" %}" alt="BellyBox"></a></h1>
 					<!-- page slogan -->
 					<span class="slogan"><span class="txt">FOOD IN THE CITY</span></span>
 				</div>
@@ -138,12 +131,12 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
-						<p>“I started with Brixton to provide you with <a href="#">daily fresh new ideas</a> about trends. It is a very clean and elegant HTML Template suitable for every blogger. Perfect for sharing your <a href="#">lifestyle</a>.”</p>
+						<p>“I started BellyBox to provide you with <a href="#">daily fresh new ideas</a> about food.”</p>
 						<div class="logo-holder">
 							<!-- page logo -->
 							<strong class="logo"><a href="#"><img src="{% static "images/BBlogo.png" %}" alt="BellyBox"></a></strong>
-							<!-- page slogan -->
-							<span class="slogan">NEWS FROM THE CITY</span>
+{#							<!-- page slogan -->#}
+{#							<span class="slogan">NEWS FROM THE CITY</span>#}
 						</div>
 					</div>
 				</div>
@@ -158,10 +151,9 @@
 				<div class="col-sm-6 col-xs-12">
 					<!-- footer-nav of the page -->
 					<ul class="footer-nav list-inline-style">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">About Us</a></li>
-						<li><a href="#">Blog</a></li>
-						<li><a href="#">Contact</a></li>
+						<li><a href="{% url 'index' %}">Home</a></li>
+						<li><a href="{% url 'about' %}">About Us</a></li>
+						<li><a href="{% url 'products' %}">Online Store</a></li>
 					</ul>
 				</div>
 			</div>
