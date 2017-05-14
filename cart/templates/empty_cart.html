@@ -2,11 +2,20 @@
 {% load static from staticfiles %}
 
 {% block content %}
-    <div class="container-fluid">
-<div class="col-lg-offset-4">
-    <div><h2>You have no items in your cart</h2></div>
-    <div class="cart-image col-lg-offset-4"> <a href="{% url 'products' %}"><img src="{% static "images/merch-icon.png" %}"></a>
-  <h3><a href="{% url 'products' %}">Why not check out our Shop?</a></h3></div>
+    <div class="container">
+    <div class="container">
+        <div class="row">
+<div class="col-md-6">
+    <div><h2>You have no items in your cart</h2>
+        <h3>Why not check out our Online Store?</h3>
+        <button class="btn btn-success" onclick="location.href='{% url 'products' %}'">Visit Shop</button>
+</div>
+        </div>
+    <div class="col-md-offset-8">
+        <a href="{% url 'products' %}"><img src="{% static "images/merch-icon.png" %}"></a>
+        </div>
+    </div>
 </div>
     </div>
+
 {% endblock %}
