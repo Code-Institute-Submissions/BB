@@ -69,16 +69,18 @@
 								<li>
 									<a href="{% url 'categories' %}">Categories</a>
 
-								<li><a href="{% url 'about' %}">About us</a></li>
 								<li><a href="{% url 'products' %}">Online Store</a></li>
                         {% if user.is_authenticated %}
                             <li><a href="{% url 'profile' %}">Profile</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="{% url 'logout' %}">Log Out</a></li>
                             <li><a href="{% url 'cart' %}">Cart</a></li>
+                            <li><a href="{% url 'new_post' %}">New Post</a></li>
+
                         {% else %}
                             <li><a href="{% url 'login' %}?next={% url 'profile' %}">Log In</a></li>
                             <li><a href="{% url 'register' %}">Register</a></li>
+                            <li><a href="{% url 'about' %}">About us</a></li>
                         {% endif %}
                               </ul>
 						</div>
