@@ -284,8 +284,10 @@
                              <p>{{ post.content }}</p>
 							<span class="continue-reading"><a href="#">Continue reading...</a></span>
 							<footer class="post-social">
-								<span class="date-holder"><a href="#">January 25, 2015</a> by <a href="#">Brixton</a></span>
+								<span class="date-holder"><a href="#">{{ post.published_date }}</a> by <a href='{% url 'post_detail' post.id %}'>{{ post.author }}</a></span>
 								<ul class="social-networks list-inline-style">
+                                    <p><strong>Views</strong> {{ post.views }} |<strong>Tag</strong> {{ post.tag }}</p>
+
 									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 									<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
@@ -313,7 +315,6 @@
 							</ul>
 						</nav>
                         <!--Pagination Section -->
-                </div>
-            </div>
+
 
 {% endblock %}

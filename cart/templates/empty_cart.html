@@ -1,6 +1,12 @@
 {% extends 'base.html' %}
+{% load static from staticfiles %}
 
 {% block content %}
-    <div>You have no items in your cart.</div>
-    <div><a href="{% url 'products' %}">Go shop</a></div>
+    <div class="container-fluid">
+<div class="col-lg-offset-4">
+    <div><h2>You have no items in your cart</h2></div>
+    <div class="cart-image col-lg-offset-4"> <a href="{% url 'products' %}"><img src="{% static "images/merch-icon.png" %}"></a>
+  <h3><a href="{% url 'products' %}">Why not check out our Shop?</a></h3></div>
+</div>
+    </div>
 {% endblock %}

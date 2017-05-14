@@ -22,6 +22,8 @@
             <th>Price</th>
             <th>Quantity</th>
             <th>Action</th>
+            <th>Total</th>
+
         </tr>
         </thead>
         <tbody>
@@ -30,7 +32,7 @@
                 <td><img height="100" width="100" src="{{ MEDIA_URL }}{{ item.product.image }}"></td>
                 <td>{{ item.product.name }}</td>
                 <td>{{ item.product.description }}</td>
-                <td>{{ item.product.price }}</td>
+                <td>€{{ item.product.price }}</td>
                 <td>{{ item.quantity }}</td>
                 <td>
                     <form method="post" action="{% url 'adjust_cart' item.id %}">
@@ -41,27 +43,26 @@
                     </form>
 
                 </td>
+                <td> <h3>€{{ total }}</h3></td>
             </tr>
         {% endfor %}
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>{{ total }}</td>
-            <td></td>
-            <td></td>
-        </tr>
+
         </tbody>
     </table>
+<div class="container">
+<div class="col-md-offset-4">
+    <h2>Your Total Today  €{{ total }} </h2>
+</div>
+  </div>
 
-    <hr>
-
+      <div class="container">
+    <div class="col-md-12">
     <form role="form" method="post" id="payment-form" action="{% url 'cart' %}">
         <div id="credit-card-errors" style="display:none">
             <div class="alert-message block-message error" id="stripe-error-message"></div>
         </div>
 
-        <legend>Pay Now!</legend>
+        <h2>Pay Here</h2>
 
         {% csrf_token %}
         {{ form | as_bootstrap }}
@@ -69,5 +70,7 @@
             <input class="btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
         </div>
     </form>
+    </div>
+      </div>
 
 {% endblock %}

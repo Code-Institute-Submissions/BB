@@ -30,7 +30,7 @@
 								<li><a href="#">{{ post.tag }}</a></li>
 							</ul>
 							<footer class="post-social post">
-								<span class="date-holder"><a href="#">{{ post.published_date }}</a> by <a href="#">Brixton</a></span>
+								<span class="date-holder">{{ post.published_date }} by <a href="{% url 'about' %}">{{ post.author }}</a></span>
 								<ul class="social-networks list-inline-style">
 									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 									<li><a href="#"><i class="fa fa-facebook"></i></a></li>

@@ -63,7 +63,7 @@
 											</li>
 
 								<li>
-									<a href="#">Categories</a>
+									<a href="{% url 'categories' %}">Categories</a>
                                     <div class="drop">
 										<ul>
 											<li>
@@ -82,6 +82,7 @@
                             <li><a href="{% url 'profile' %}">Profile</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="{% url 'logout' %}">Log Out</a></li>
+                            <li><a href="{% url 'cart' %}">Cart</a></li>
                         {% else %}
                             <li><a href="{% url 'login' %}?next={% url 'profile' %}">Log In</a></li>
                             <li><a href="{% url 'register' %}">Register</a></li>
@@ -165,7 +166,30 @@
 				</div>
 			</div>
 		</footer>
+   <!-- jQuery -->
+    <script type="text/javascript" src="{% static "js/jquery-2.1.1.js" %}"></script>
+    <!--  plugins -->
+    <script type="text/javascript" src="{% static "js/bootstrap.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/menu.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/animated-headline.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/isotope.pkgd.min.js" %}"></script>
 
+
+    <!--  custom script -->
+    <script type="text/javascript" src="{% static "js/custom.js" %}"></script>
+ <script>
+$(function(){
+
+var $container = $('#container');
+
+$container.imagesLoaded( function(){
+  $container.masonry({
+    itemSelector : '.masonryImage'
+  });
+});
+
+});
+</script>
 
 	<!-- include custom JavaScript -->
 	<script type="text/javascript" src="{% static "js/jquery-1.11.2.min.js" %}"></script>

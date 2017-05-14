@@ -3,70 +3,27 @@
 {% block content %}
     {% load static from staticfiles %}
 {% load bootstrap_tags %}
+    <div class="container">
  <div class="container">
     <div class="col-md-6">
     <img src="{% gravatar_url user.email 150 %}" style="width:100px; height: 100px; background-color: #12ABB2; color: #ffffff;" class="img-circle">
     <h2>Success!</h2>
-    <p>You are logged in as {{ user.email }} </p>
+    <p>You are logged in as: <br>
+       <strong> Userame:</strong> {{ user.username }} <br>
+         <strong> Email:</strong>  {{ user.email }}</p>
      {% if user.is_authenticated %}
+         </div>
          <div class="col-md-6">
-         <button class="btn btn-default" onclick="location.href='{% url 'new_post' %}'">New Post</button>
+        <div> <h2> What would you like to do today?</h2> <br>
+             See below for some options</div>
+             <div class="profileBlog">
+         <button class="btn btn-primary" onclick="location.href='{% url 'new_post' %}'">New Post</button>
+            <button class="btn btn-danger" onclick="location.href='{% url 'products' %}'">Visit Shop</button>
+             <button class="btn btn-success" onclick="location.href='{% url 'cart' %}'">Your Cart</button></div>
          </div>
                 {% endif %}
     </div>
  </div>
-{% block head_js %}
-    <script src="https://js.stripe.com/v2/" type="text/javascript"></script>
-    <script type="text/javascript">
-        //<![CDATA[
-        Stripe.publishableKey = '{{ publishable }}';
-        //]]>
-    </script>
-    <script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
-{% endblock %}
-
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>Image</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Action</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for item in items %}
-            <tr>
-                <td><img height="100" width="100" src="{{ MEDIA_URL }}{{ item.product.image }}"></td>
-                <td>{{ item.product.name }}</td>
-                <td>{{ item.product.description }}</td>
-                <td>{{ item.product.price }}</td>
-                <td>{{ item.quantity }}</td>
-                <td>
-                    <form method="post" action="{% url 'adjust_cart' item.id %}">
-                        {% csrf_token %}
-                        Quantity
-                        <input name='quantity' type="number" min="0" max="999">
-                        <button type="submit">Adjust</button>
-                    </form>
-
-                </td>
-            </tr>
-        {% endfor %}
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>{{ total }}</td>
-            <td></td>
-            <td></td>
-        </tr>
-        </tbody>
-    </table>
-
-    <hr>
 
 
 {% endblock %}

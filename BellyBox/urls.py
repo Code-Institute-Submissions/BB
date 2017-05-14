@@ -22,15 +22,12 @@ from cart import urls as cart_urls
 from .settings import MEDIA_ROOT
 from products import urls as products_urls
 from payments import urls as payments_urls
-from filebrowser.sites import site
 
 
 
 
 
 urlpatterns = [
-    url(r'^admin/filebrowser/', include(site.urls)),
-    url(r'^grappelli/', include('grappelli.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/', include('accounts.urls')),
     url(r'^user/', include('accounts.urls')),

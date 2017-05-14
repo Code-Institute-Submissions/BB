@@ -15,6 +15,16 @@ def post_list(request):
                                 ).order_by('-published_date') [0:3]
     return render(request, "blogposts.html", {'posts': posts})
 
+def all_posts(request):
+    """
+    Create a view that will return a
+    list of Posts that were published prior to'now'
+    and render them to the 'categories.html' template
+    """
+    posts = Post.objects.filter(published_date__lte=timezone.now()
+                                ).order_by('-published_date')
+    return render(request, "categories.html", {'posts': posts})
+
 def post_detail(request, id):
 
     post = get_object_or_404(Post, pk=id)
@@ -66,3 +76,5 @@ def last3(request):
 def widget(request):
     return render(request, "index.html")
 
+def categories(request):
+   return render(request, "categories.html")
