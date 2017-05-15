@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 
 import os
 import env
-# import dj_database_url
+import dj_database_url
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -28,8 +28,8 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
-INTERNAL_IPS = ['127.0.0.1']
+ALLOWED_HOSTS = ['bellybox.herokuapp.com','127.0.0.1']
+# INTERNAL_IPS = ['127.0.0.1']
 
 
 # Application definition
@@ -94,14 +94,14 @@ WSGI_APPLICATION = 'BellyBox.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
-# DATABASES ={'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+DATABASES ={'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
 
 
 # Password validation
@@ -141,10 +141,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-DEFAULT_FROM_EMAIL = 'chris@example.com'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-DISQUS_WEBSITE_SHORTNAME = 'BellyBox'
 
 
 # REST_FRAMEWORK = {
@@ -198,3 +194,12 @@ STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')
 STRIPE_SECRET = os.getenv('STRIPE_SECRET')
 
 
+# Forgotten Password Settings
+
+DEFAULT_FROM_EMAIL = 'chris@example.com'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# DISQUS Comments Settings
+
+
+DISQUS_WEBSITE_SHORTNAME = 'BellyBox'
