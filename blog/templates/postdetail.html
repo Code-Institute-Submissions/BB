@@ -56,8 +56,8 @@
 									</a>
 								</div>
 								<div class="author-txt">
-									<h2><a href="#">Written by  Brixton</a></h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam massa quis mauris sollicitudin commodo venenatis ligula commodo.</p>
+									<h2><a href="#">Written by Chris H</a></h2>
+									<p>Hello, my name is Chris. I am a blogger living in Dublin. This is my blog, where I post my photos, reviews and tips about the food in Dublin. Never miss out on new stuff</p>
 								</div>
 							</div>
 						</article>
@@ -74,8 +74,8 @@
 
 						<!-- post navigation of the page -->
 						<div class="post-navigation">
-							<a href="#" class="post-prev"><span class="txt">« Previous post</span>{{ post.title }}/a>
-							<a href="#" class="post-next"><span class="txt">Next post »</span>{{ post.title  }}/</a>
+							<a href="{% url 'post_list' %}" class="post-prev"><span class="txt">« Previous post</span>{{ post.title  }}/a>
+							<a href="{% url 'post_list' %}" class="post-next"><span class="txt">Next post »</span>{{ post.title  }}/</a>
 						</div>
 					</section>
 					<!-- contain sidebar of the page -->
@@ -84,28 +84,27 @@
 						<section class="widget">
 							<h3>About me</h3>
 							<div class="img-box">
-								<a href="#">
+								<a href="{% url 'about' %}">
 									<!-- picturefill html structure example -->
 									<span data-picture data-alt="image description">
-										<span data-src="http://placehold.it/233x248" data-height="248" data-width="233"></span>
-										<span data-src="http://placehold.it/466x496" data-height="248" data-width="233" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span> <!-- retina 2x desktop -->
+										<a href="{% url 'about' %}"><img src="{% static "images/whiskey.gif" %}" height="248" width="233" ></a>
 										<!--[if (lt IE 9) & (!IEMobile)]>
 											<span data-src="http://placehold.it/233x248"></span>
 										<![endif]-->
 										<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-										<noscript><img src="http://placehold.it/233x248" width="233" height="248" alt="image description" ></noscript>
+										<noscript><img src="{% static "images/whiskey.gif" %}" height="248" width="233" alt="image description" ></noscript>
 									</span>
 								</a>
 							</div>
-							<p>Hello, my name is <strong><a href="#">Brixton</a></strong>. I am a blogger living in New York. This is my blog, where I post my photos, fashion trends and tips about the fashion world. Never miss out on new stuff.</p>
+							<p>Hello, my name is Chris. I am a blogger living in Dublin. This is my blog, where I post my photos, reviews and tips about the food in Dublin. Never miss out on new stuff.</p>
 						</section>
 						<!-- social-widget of the page -->
-						<section class="widget social-widget">
+							<section class="widget social-widget">
 							<ul class="social-networks list-inline-style">
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-								<li><a href="#"><i class="fa fa-flickr"></i></a></li>
+								<li><a href="https://twitter.com"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a></li>
+								<li><a href="https://www.flickr.com"><i class="fa fa-flickr"></i></a></li>
 							</ul>
 						</section>
                         <!-- form-widget of the page -->
@@ -119,81 +118,17 @@
 							</form>
 						</section>
 						<!-- categories-widget of the page -->
-						<section class="widget categories-widget">
+							<section class="widget categories-widget">
 							<h3>Categories</h3>
 							<ul class="cat-list">
-								<li><a href="#">Blogroll</a></li>
-								<li><a href="#">Editor's choice</a></li>
-								<li><a href="#">Fashion</a></li>
-								<li><a href="#">Featured</a></li>
-								<li><a href="#">Photography</a></li>
-								<li><a href="#">Photoshootings</a></li>
+								<li><a href="{% url 'categories' %}">Ribs</a></li>
+								<li><a href="{% url 'categories' %}">Wings</a></li>
+								<li><a href="{% url 'categories' %}">Salads</a></li>
+								<li><a href="{% url 'categories' %}">Burgers</a></li>
+								<li><a href="{% url 'categories' %}">Sandwiches</a></li>
 							</ul>
 						</section>
-						<!-- popular-widget of the page -->
-						<section class="widget popular-widget">
-							<h3>Recent Posts</h3>
-							<div class="popular-box">
-								<div class="popular-posts">
-									<div class="img-box">
-										<a href="#">
-											<!-- picturefill html structure example -->
-											<span data-picture data-alt="image description">
-												<span data-src="http://placehold.it/232x131" data-height="131" data-width="232"></span>
-												<span data-src="http://placehold.it/464x262" data-height="131" data-width="232" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span> <!-- retina 2x desktop -->
-												<!--[if (lt IE 9) & (!IEMobile)]>
-													<span data-src="http://placehold.it/232x131"></span>
-												<![endif]-->
-												<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-												<noscript><img src="http://placehold.it/232x131" width="232" height="131" alt="image description" ></noscript>
-											</span>
-										</a>
-									</div>
-									<a href="#" class="brand-link">visit to nature</a>
-								</div>
-								<div class="popular-posts">
-									<div class="img-box">
-										<a href="#">
-											<!-- picturefill html structure example -->
-											<span data-picture data-alt="image description">
-												<span data-src="http://placehold.it/232x131" data-height="131" data-width="232"></span>
-												<span data-src="http://placehold.it/464x262" data-height="131" data-width="232" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span> <!-- retina 2x desktop -->
-												<!--[if (lt IE 9) & (!IEMobile)]>
-													<span data-src="http://placehold.it/232x131"></span>
-												<![endif]-->
-												<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-												<noscript><img src="http://placehold.it/232x131" width="232" height="131" alt="image description" ></noscript>
-											</span>
-										</a>
-									</div>
-									<a href="#" class="brand-link">Beautiful hiking</a>
-								</div>
-								<div class="popular-posts">
-									<div class="img-box">
-										<a href="#">
-											<!-- picturefill html structure example -->
-											<span data-picture data-alt="image description">
-												<span data-src="http://placehold.it/232x131" data-height="131" data-width="232"></span>
-												<span data-src="http://placehold.it/464x262" data-height="131" data-width="232" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span> <!-- retina 2x desktop -->
-												<!--[if (lt IE 9) & (!IEMobile)]>
-													<span data-src="http://placehold.it/232x131"></span>
-												<![endif]-->
-												<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-												<noscript><img src="http://placehold.it/232x131" width="232" height="131" alt="image description" ></noscript>
-											</span>
-										</a>
-									</div>
-									<a href="#" class="brand-link">Travel For Facination</a>
-								</div>
-							</div>
-						</section>
-						<!-- widget of the page text-widget -->
-{#						<section class="widget text-widget">#}
-{#							<h3>Purchase Merch</h3>#}
-{#							<p>If you come all the way down here, you probably like our <strong>Brixton theme</strong>. To help you find where you can buy it, we prepared a solution for that also. Simply click the button below. </p>#}
-{#							<a href="#" class="btn-detail">Purchase Brixton</a>#}
-{#						</section>#}
-						<!-- twitter-widget of the page -->
+
 						<section class="widget twitter-widget">
 							<ul class="list-unstyled">
 								<li>

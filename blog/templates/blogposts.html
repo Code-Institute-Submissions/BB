@@ -56,7 +56,7 @@
 									</span>
 								</a>
 							</div>
-							<p>Hello, my name is <strong><a href="#">Brixton</a></strong>. I am a blogger living in New York. This is my blog, where I post my photos, fashion trends and tips about the fashion world. Never miss out on new stuff.</p>
+							<p>Hello, my name is Chris. I am a blogger living in Dublin. This is my blog, where I post my photos, reviews and tips about the food in Dublin. Never miss out on new stuff.</p>
 						</section>
 
                         	<!-- form-widget of the page -->
@@ -80,72 +80,16 @@
 							</ul>
 						</section>
 
-						<!-- popular-widget of the page -->
-						<section class="widget popular-widget">
-							<h3>Popular Posts</h3>
-							<div class="popular-box">
-								<div class="popular-posts">
-									<div class="img-box">
-										<a href="#">
-											<!-- picturefill html structure example -->
-											<span data-picture data-alt="image description">
-												<span data-src="http://placehold.it/232x131" data-height="131" data-width="232"></span>
-												<span data-src="http://placehold.it/464x262" data-height="131" data-width="232" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span> <!-- retina 2x desktop -->
-												<!--[if (lt IE 9) & (!IEMobile)]>
-													<span data-src="http://placehold.it/232x131"></span>
-												<![endif]-->
-												<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-												<noscript><img src="http://placehold.it/232x131" width="232" height="131" alt="image description" ></noscript>
-											</span>
-										</a>
-									</div>
-									<a href="#" class="brand-link">BRAND NEW SELECTION</a>
-								</div>
-								<div class="popular-posts">
-									<div class="img-box">
-										<a href="#">
-											<!-- picturefill html structure example -->
-											<span data-picture data-alt="image description">
-												<span data-src="http://placehold.it/232x131" data-height="131" data-width="232"></span>
-												<span data-src="http://placehold.it/464x262" data-height="131" data-width="232" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span> <!-- retina 2x desktop -->
-												<!--[if (lt IE 9) & (!IEMobile)]>
-													<span data-src="http://placehold.it/232x131"></span>
-												<![endif]-->
-												<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-												<noscript><img src="http://placehold.it/232x131" width="232" height="131" alt="image description" ></noscript>
-											</span>
-										</a>
-									</div>
-									<a href="#" class="brand-link">BRAND NEW BARBERSHOP</a>
-								</div>
-								<div class="popular-posts">
-									<div class="img-box">
-										<a href="#">
-											<!-- picturefill html structure example -->
-											<span data-picture data-alt="image description">
-												<span data-src="http://placehold.it/232x131" data-height="131" data-width="232"></span>
-												<span data-src="http://placehold.it/464x262" data-height="131" data-width="232" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span> <!-- retina 2x desktop -->
-												<!--[if (lt IE 9) & (!IEMobile)]>
-													<span data-src="http://placehold.it/232x131"></span>
-												<![endif]-->
-												<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-												<noscript><img src="http://placehold.it/232x131" width="232" height="131" alt="image description" ></noscript>
-											</span>
-										</a>
-									</div>
-									<a href="#" class="brand-link">NEW BREAKFAST CAFE</a>
-								</div>
-							</div>
-						</section>
+					
 						<!-- categories-widget of the page -->
 						<section class="widget categories-widget">
 							<h3>Categories</h3>
 							<ul class="cat-list">
-								<li><a href="#">Ribs</a></li>
-								<li><a href="#">Wings</a></li>
-								<li><a href="#">Salads</a></li>
-								<li><a href="#">Burgers</a></li>
-								<li><a href="#">Sandwiches</a></li>
+								<li><a href="{% url 'categories' %}">Ribs</a></li>
+								<li><a href="{% url 'categories' %}">Wings</a></li>
+								<li><a href="{% url 'categories' %}">Salads</a></li>
+								<li><a href="{% url 'categories' %}">Burgers</a></li>
+								<li><a href="{% url 'categories' %}">Sandwiches</a></li>
 							</ul>
 						</section>
 						<!-- instagram-widget of the page -->
@@ -154,64 +98,36 @@
 							<iframe src="//instansive.com/widgets/42e108ca202e77a1b151fe3cac6f6705e5880437.html" id="instansive_42e108ca20" name="instansive_42e108ca20"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
 						</section>
 
+                     {%  for post in posts %}
 						<!-- popular-widget of the page -->
 						<section class="widget popular-widget">
 							<h3>Recent Posts</h3>
 							<div class="popular-box">
 								<div class="popular-posts">
 									<div class="img-box">
-										<a href="#">
+										<a href="{% url 'post_detail' post.id %}">
 											<!-- picturefill html structure example -->
-											<span data-picture data-alt="image description">
-												<span data-src="http://placehold.it/232x131" data-height="131" data-width="232"></span>
-												<span data-src="http://placehold.it/464x262" data-height="131" data-width="232" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span> <!-- retina 2x desktop -->
-												<!--[if (lt IE 9) & (!IEMobile)]>
-													<span data-src="http://placehold.it/232x131"></span>
-												<![endif]-->
-												<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-												<noscript><img src="http://placehold.it/232x131" width="232" height="131" alt="image description" ></noscript>
-											</span>
-										</a>
-									</div>
-									<a href="#" class="brand-link">visit to nature</a>
-								</div>
-								<div class="popular-posts">
-									<div class="img-box">
-										<a href="#">
-											<!-- picturefill html structure example -->
-											<span data-picture data-alt="image description">
-												<span data-src="http://placehold.it/232x131" data-height="131" data-width="232"></span>
-												<span data-src="http://placehold.it/464x262" data-height="131" data-width="232" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span> <!-- retina 2x desktop -->
-												<!--[if (lt IE 9) & (!IEMobile)]>
-													<span data-src="http://placehold.it/232x131"></span>
-												<![endif]-->
-												<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-												<noscript><img src="http://placehold.it/232x131" width="232" height="131" alt="image description" ></noscript>
-											</span>
-										</a>
-									</div>
-									<a href="#" class="brand-link">Beautiful hiking</a>
-								</div>
-								<div class="popular-posts">
-									<div class="img-box">
-										<a href="#">
-											<!-- picturefill html structure example -->
-											<span data-picture data-alt="image description">
-												<span data-src="http://placehold.it/232x131" data-height="131" data-width="232"></span>
-												<span data-src="http://placehold.it/464x262" data-height="131" data-width="232" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span> <!-- retina 2x desktop -->
-												<!--[if (lt IE 9) & (!IEMobile)]>
-													<span data-src="http://placehold.it/232x131"></span>
-												<![endif]-->
-												<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-												<noscript><img src="http://placehold.it/232x131" width="232" height="131" alt="image description" ></noscript>
-											</span>
-										</a>
-									</div>
-									<a href="#" class="brand-link">Travel For Facination</a>
-								</div>
-							</div>
-						</section>
+                                              {% if post.image %}
+						<span>
+                              <span><img src="{{ MEDIA_URL }}{{ post.image }}" width="232px" height="131px" ><a href="{% url 'post_detail' post.id %}"></a></span>
 
+{#											<span data-picture data-alt="image description">#}
+{#												<span data-src="http://placehold.it/232x131" data-height="131" data-width="232"></span>#}
+{#												<span data-src="http://placehold.it/464x262" data-height="131" data-width="232" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span> <!-- retina 2x desktop -->#}
+{#												<!--[if (lt IE 9) & (!IEMobile)]>#}
+													<span data-src="http://placehold.it/232x131"></span>
+												<![endif]-->
+												<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+												<noscript><img src="http://placehold.it/232x131" width="232" height="131" alt="image description" ></noscript>
+											</span>
+										</a>
+									</div>
+									<a href="{% url 'post_detail' post.id %}" class="brand-link">{{ post.sub_title }}</a>
+								</div>
+                            </div>
+						</section>
+       {% endif %}
+{% endfor %}
 						<!-- twitter-widget of the page -->
 						<section class="widget twitter-widget">
 							<ul class="list-unstyled">
