@@ -201,5 +201,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # DISQUS Comments Settings
 
-
 DISQUS_WEBSITE_SHORTNAME = 'BellyBox'
+
+# SSL Security Settings
+
+SECURE_SSL_REDIRECT = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
