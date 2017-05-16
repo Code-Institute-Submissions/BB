@@ -7,7 +7,7 @@
 }
 
 .btn .changeIT {
-    height: 51px;
+    height: 51px !important;
     margin-left: 20px !important;
     width:160px !important;
 }
@@ -16,7 +16,13 @@
     #sidebar {
         display: none !important;
     }
+        body {
+
+            overflow-x: hidden !important;
 }
+
+    }
+
 
 .fa .fa-home {
     font-size: 15px;
@@ -39,4 +45,12 @@
 
 .posts-blog img {
     width: 100% !important;
+}
+
+.navbar-default .navbar-nav{
+    font-size: 14px !important;
+}
+
+.follow-instagram .logo-holder {
+    padding-bottom: 5px !important;
 }
