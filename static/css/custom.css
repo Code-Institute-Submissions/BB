@@ -13,9 +13,6 @@
 }
 
 @media only screen and (max-width: 767px) {
-     .galley-display {
-        display:block !important;
-    }
 
     #sidebar {
         display: none !important;
@@ -65,4 +62,10 @@
 
 .follow-instagram .logo-holder {
     padding-bottom: 5px !important;
+}
+
+.profilePage {
+    border: groove !important;
+    border-radius: 25px !important;
+    padding-top: 10px !important;
 }
