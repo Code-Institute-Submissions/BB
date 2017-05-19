@@ -41,4 +41,4 @@ def buy_now(request, id):
         args = {'form': form, 'publishable': settings.STRIPE_PUBLISHABLE, 'product': product}
         args.update(csrf(request))
 
-        return render(request, 'pay.html', args)
+    return render(request, 'pay.html', args)
