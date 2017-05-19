@@ -8,9 +8,9 @@
         {% csrf_token %}
         {{ form | as_bootstrap}}
         <div class="container">
-            <div class="row">
-        <button type="submit" class="btn btn-info col-md-6">Save</button>
-                <button class="btn btn-success col-md-2 changeIT" onclick="location.href='{% url 'post_list' %}'">Cancel</button>
+            <div class="row col-md-12">
+        <button type="submit" class="btn btn-info col-md-6 pull-left">Save</button>
+                <button class="btn btn-success col-md-6 pull-right changeIT" onclick="location.href='{% url 'post_list' %}'">Cancel</button>
             </div>
 </div>
     </form>
