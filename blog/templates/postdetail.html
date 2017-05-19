@@ -72,11 +72,7 @@
                                 {% set_disqus_title post.title %}
                                 {% disqus_show_comments %}
 
-						<!-- post navigation of the page -->
-						<div class="post-navigation">
-							<a href="{% url 'post_list' %}" class="post-prev"><span class="txt">« Previous post</span>{{ post.title  }}/a>
-							<a href="{% url 'post_list' %}" class="post-next"><span class="txt">Next post »</span>{{ post.title  }}/</a>
-						</div>
+
 					</section>
 					<!-- contain sidebar of the page -->
 					<aside  class="col-sm-4 col-lg-3" id="sidebar">

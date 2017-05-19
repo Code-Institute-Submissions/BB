@@ -24,6 +24,10 @@
             overflow-x: hidden !important;
 
     }
+    .alert-success{
+        width: 200px;
+        margin-left: 57px;
+    }
     }
 
 
