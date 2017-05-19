@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['bellybox.herokuapp.com','127.0.0.1']
-# INTERNAL_IPS = ['127.0.0.1']
+INTERNAL_IPS = ['127.0.0.1']
 
 
 # Application definition
@@ -52,9 +52,7 @@ INSTALLED_APPS = [
     'storages',
     'cart',
     'payments',
-     'tinymce_4',
-    'grappelli',
-    'filebrowser',
+
 ]
 
 MIDDLEWARE = [

@@ -1,7 +1,6 @@
 from __future__ import unicode_literals
 from django.utils import timezone
 from django.db import models
-from tinymce.models import HTMLField
 
 
 
@@ -11,7 +10,7 @@ class Post(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
     sub_title = models.CharField(max_length=30)
-    content = HTMLField()
+    content = models.TextField()
     created_date = models.DateTimeField(auto_now_add=True)
     published_date = models.DateTimeField(blank=True, null=True)
     views = models.IntegerField(default=0)
