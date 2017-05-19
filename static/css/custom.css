@@ -28,6 +28,10 @@
         width: 200px;
         margin-left: 57px;
     }
+
+    .galley-display {
+        display:block
+    }
     }
 
 
