@@ -2,6 +2,10 @@
     height: 275px !important;
 }
 
+
+.fashion {
+    display: inline-block !important;
+}
 #sidebar {
     margin-top: 90px !important;
 }
@@ -17,20 +21,27 @@
     #sidebar {
         display: none !important;
     }
-        body {
 
-            overflow-x: hidden !important;
-}
+    body {
+
+        overflow-x: hidden !important;
+    }
+
     html {
-            overflow-x: hidden !important;
+        overflow-x: hidden !important;
 
     }
-    .alert-success{
+
+    .alert-success {
         width: 200px !important;
         margin-left: 57px !important;
     }
 
+    .fashion {
+        display: block !important;
     }
+
+}
 
 
 .fa .fa-home {
