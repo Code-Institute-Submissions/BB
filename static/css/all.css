@@ -2376,7 +2376,7 @@ Primary use:	Blog
 .author-info .alignleft img,
 .related-post .post-block .img-box img {
 	width: 100%;
-	display: block;
+	/*display: block;*/
 	height: auto;
 }
 
