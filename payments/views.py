@@ -1,4 +1,4 @@
-from django.contrib import messages, auth
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from payments.forms import MakePaymentForm
 from django.shortcuts import render, get_object_or_404, redirect, reverse
