@@ -9,11 +9,12 @@
         <!-- portfolio div -->
         <div class="portfolio-div">
             <div class="portfolio">
+                <div class="no-padding portfolio_container clearfix">
   {% for post in posts %}
                 <!-- portfolio_filter -->
 
                 <!-- portfolio_container -->
-                <div class="no-padding portfolio_container clearfix masonryImage">
+                <div class="no-padding">
                     <!-- single work -->
                     <div class="col-md-4 col-sm-6  fashion logo">
                         <a href='{% url 'post_detail' post.id %}' class="portfolio_item">
@@ -33,7 +34,7 @@
                     <!-- end single work -->
 
 {%  endfor %}
-
+                    </div>
                 </div>
                 <!-- end portfolio_container -->
             </div>
