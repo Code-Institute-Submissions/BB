@@ -3,9 +3,6 @@
 }
 
 
-.fashion {
-    display: inline-block !important;
-}
 #sidebar {
     margin-top: 90px !important;
 }
@@ -81,4 +78,8 @@
 .changeIT{
     width: 160px !important;
     height: 48px !important;
+}
+
+.form-control{
+    color: #000;
 }
