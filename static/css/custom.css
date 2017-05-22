@@ -2,7 +2,6 @@
     height: 275px !important;
 }
 
-
 #sidebar {
     margin-top: 90px !important;
 }
@@ -14,32 +13,26 @@
 }
 
 @media only screen and (max-width: 767px) {
-
     #sidebar {
         display: none !important;
     }
+        body {
 
-    body {
-
-        overflow-x: hidden !important;
-    }
-
-    html {
-        overflow-x: hidden !important;
-
-    }
-
-    .alert-success {
-        width: 200px !important;
-        margin-left: 57px !important;
-    }
-
-
+            overflow-x: hidden !important;
 }
+    html {
+            overflow-x: hidden !important;
+
+    }
+    .alert-success{
+        width: 200px;
+        margin-left: 57px;
+    }
+    }
 
 
-.fa-home {
-    font-size: 25px !important;
+.fa .fa-home {
+    font-size: 15px;
     margin-right: 15px;
 
 }
@@ -62,21 +55,9 @@
 }
 
 .navbar-default .navbar-nav{
-    font-size: 18px !important;
+    font-size: 14px !important;
 }
 
 .follow-instagram .logo-holder {
     padding-bottom: 5px !important;
 }
-
-.profilePage {
-    border: groove !important;
-    border-radius: 25px !important;
-    padding-top: 10px !important;
-}
-
-
-.form-control{
-    color: #000;
-}
-
