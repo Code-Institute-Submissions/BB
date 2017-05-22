@@ -1,15 +1,13 @@
 /*------------------------------------------------------------------
 [Master Stylesheet]
-
 Project:		Smashing Magazine
 Version:		1.0
 Last change:	15/04/2015
-Primary use:	Blog 
+Primary use:	Blog
 -------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------
 [Table of contents]
-
 1. Body
 2. heading styles
 3. Header / #header
@@ -29,7 +27,6 @@ Primary use:	Blog
 17. break points from 991px to 767px
 18. break points from 767px to 599px
 19. break points from 599px
-
 -------------------------------------------------------------------*/
 
 /*
@@ -2443,7 +2440,7 @@ Primary use:	Blog
 body {
     overflow-x: hidden !important;
 }
-  
+
 body {
 	font: 18px/34px "Raleway", Helvetica, Arial, sans-serif;
 	background: #f4f4f4;
@@ -5221,4 +5218,3 @@ h3 a:hover {
 		transform: rotate(359deg);
 	}
 }
-
