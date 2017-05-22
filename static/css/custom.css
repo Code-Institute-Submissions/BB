@@ -37,15 +37,12 @@
         margin-left: 57px !important;
     }
 
-    .fashion {
-        display: inline-block !important;
-    }
 
 }
 
 
-.fa .fa-home {
-    font-size: 25px;
+.fa-home {
+    font-size: 25px !important;
     margin-right: 15px;
 
 }
