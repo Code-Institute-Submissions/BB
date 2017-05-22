@@ -2437,9 +2437,9 @@ Primary use:	Blog
 
 /* Chris Custom CSS to fix horizontal scroll */
 
-body {
-    overflow-x: hidden !important;
-}
+/*body {*/
+    /*overflow-x: hidden !important;*/
+/*}*/
 
 body {
 	font: 18px/34px "Raleway", Helvetica, Arial, sans-serif;
