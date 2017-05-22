@@ -1,6 +1,6 @@
 # BellyBox - Django Project
 
-An exercise in creating a Django blog that allows for users to register, login and create new blog posts. The posts are equipped with Disqus Comments to promote engagement, and provides edit functionality for uses when logged in an authenticated. The blog has upgraded Django security features to force HTTPS redirects. 
+An exercise in creating a Django blog that allows for users to register, login and create new blog posts. The posts are equipped with Disqus Comments to promote engagement, and provides edit functionality for uses when logged in and authenticated. The blog has upgraded Django security features to force HTTPS redirects. 
 
 # Getting Started
 
@@ -12,15 +12,15 @@ It can be viewed here - https://bellybox.herokuapp.com/
 
 #  Creating an Accout
 
-To view full functionality of the app, you can navigate to the Register page through the Navbar link. You can then register a new account by registering your username, email, name you will then be presented with the option to create a new post, or if you visit any posts, you will be given the option to edit a post.
+To view full functionality of the app, you can navigate to the Register page through the Navbar link. You can then register a new account by registering your username, email and name. You will then be presented with the option to create a new post, or if you visit any existing posts, you will be presented with the option to edit the post.
 
-If you wish to test/develop this app locally, clone this repo and use the following guidelines:
+If you wish to test/develop this app locally, clone this repo and follow the below guidelines:
 
 - git clone https://github.com/chrishealy871/BB.git
 
 # Python
 
-You must have Python 2.7 installed on your system, available here. Download the correct version for your operating system and follow the installation instructions.
+You must have Python 2.7 installed on your system. Download the correct version for your operating system and follow the installation instructions.
 
 - requirements.txt
 
@@ -39,8 +39,6 @@ Navigate to http://localhost:8000/ to view your app locally.
 Django - a high-level Python Web framework that encourages rapid development and clean, pragmatic design
 
 PostgreSQL - a powerful, open source object-relational database system
-
-Stripe - allows both private individuals and businesses to accept payments over the Internet
 
 Amazon S3 - object storage with a simple web service interface to store and retrieve any amount of data from anywhere on the web
 
