@@ -16,14 +16,14 @@
     #sidebar {
         display: none !important;
     }
-        body {
+        /*body {*/
 
-            overflow-x: hidden !important;
-}
-    html {
-            overflow-x: hidden !important;
+            /*overflow-x: hidden !important;*/
+/*}*/
+    /*html {*/
+            /*overflow-x: hidden !important;*/
 
-    }
+    /*}*/
     .alert-success{
         width: 200px;
         margin-left: 57px;
