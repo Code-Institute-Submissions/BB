@@ -32,7 +32,7 @@
 
 
 .fa .fa-home {
-    font-size: 15px;
+    font-size: 25px;
     margin-right: 15px;
 
 }
@@ -55,9 +55,14 @@
 }
 
 .navbar-default .navbar-nav{
-    font-size: 14px !important;
+    font-size: 16px !important;
 }
 
 .follow-instagram .logo-holder {
     padding-bottom: 5px !important;
+}
+
+.changeIT{
+        height: 47px !important;
+        width: 154px !important;
 }
